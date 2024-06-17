@@ -57,8 +57,13 @@ const App = () => {
                 console.log('Connected MetaMask accounts:', accounts);
                 setWalletAddress(accounts[0]);
             } catch (error) {
-                console.error('Error connecting to MetaMask:', error);
-                setError('Error connecting to MetaMask');
+                if (error.code === 4001) {
+                    console.error('User rejected the connection request:', error);
+                    setError('User rejected the connection request');
+                } else {
+                    console.error('Error connecting to MetaMask:', error);
+                    setError('Error connecting to MetaMask');
+                }
             }
         } else {
             alert('MetaMask is not installed. Please install MetaMask and try again.');
