@@ -117,3 +117,14 @@ h4 {
 .close:hover {
   color: #000;
 }
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgb(210, 209, 209);
+  
+}
+
+.footer-logo {
+  width: 100px;
+  margin-top: 10px;
+}

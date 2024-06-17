@@ -122,6 +122,11 @@ const App = () => {
                     </div>
                 </div>
             )}
+
+            <footer className="footer">
+                <p>Powered by Brand Kiln</p>
+                <img src="/brandkiln_logo.png" alt="Brand Kiln Pvt Ltd Logo" className="footer-logo" />
+            </footer>
         </div>
     );
 };
